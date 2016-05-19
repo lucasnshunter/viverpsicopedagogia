@@ -77,21 +77,10 @@
                 <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
               </tr>
             <% end %>
-
-                <!-- Pager -->
-                <ul class="pager">
-                    <li class="previous">
-                        <a href="#">&larr; Older</a>
-                    </li>
-                    <li class="next">
-                        <a href="#">Newer &rarr;</a>
-                    </li>
-                </ul>
-
-            </div>
-
+              <%=will_paginate @posts%>
+             
             
-<%=will_paginate @posts%>
+
              
 
         
