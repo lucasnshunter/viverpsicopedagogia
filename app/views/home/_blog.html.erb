@@ -22,7 +22,7 @@
                                 <div class="entry-thumbnail">
                                      <%= image_tag "images_home/blog/01.jpg", class: "img-responsive", alt: "" %>
                                     
-                                    <span class="post-format post-format-video"><i class="fa fa-film"></i></span>
+                            <span class="post-format post-format-video"><i class="fa fa-file-text"></i></span>
                                 </div>
                                 <div class="entry-date"><%= post.created_at %></div>
                                 <h2 class="entry-title"><a href="#"><%= post.titulo %></a></h2>
@@ -32,7 +32,7 @@
                                 <div  >
                                 <P id="postagem"><%= post.abstract %>...</P>
                                 </div>
-                                <a class="btn btn-primary" href="#"><%= link_to 'Leia mais', post %></a>
+                                <%= link_to 'Leia mais', post %>
                             </div>
 
                             <footer class="entry-meta">

@@ -1,0 +1,69 @@
+ <div class="blog-post blog-media wow fadeInRight" data-wow-duration="300ms" data-wow-delay="200ms">
+                        <article class="media clearfix">
+                            <div class="entry-thumbnail pull-left">
+                                 <%= image_tag "images_home/blog/03.jpg", class: "img-responsive", alt: "" %>
+                                <span class="post-format post-format-audio"><i class="fa fa-music"></i></span>
+                            </div>
+                            <div class="media-body">
+                                <header class="entry-header">
+                                    <div class="entry-date">03 November 2014</div>
+                                    <h2 class="entry-title"><a href="#">Play list of old bangle  music and gajal</a></h2>
+                                </header>
+
+                                <div class="entry-content">
+                                    <P>With a blow from the top-maul Ahab knocked off the steel head of the lance, and then handing to the steel</P>
+                                    <a class="btn btn-primary" href="#">Read More</a>
+                                </div>
+
+                                <footer class="entry-meta">
+                                    <span class="entry-author"><i class="fa fa-pencil"></i> <a href="#">Ruth</a></span>
+                                    <span class="entry-category"><i class="fa fa-folder-o"></i> <a href="#">Tutorial</a></span>
+                                    <span class="entry-comments"><i class="fa fa-comments-o"></i> <a href="#">15</a></span>
+                                </footer>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    
+                    #############################################################################################3
+                    <div class="item active">
+                                <p><img class="img-circle img-thumbnail" src="images/testimonial/01.jpg" alt=""></p>
+                                <h4>nome da pessoa atendida pelo projeto</h4>
+                                <small>nome da atividade ou produto por ela ultilizado ou comprado</small>
+                                <p>Isso aqui é um testemunhal , pessoas deixam declarações aqui falando o quanto po produto/programa/serviço é bom e recomendando ele</p>
+                            </div>
+                            <div class="item">
+                                <p><img class="img-circle img-thumbnail" src="images/testimonial/01.jpg" alt=""></p>
+                                <h4>nome da pessoa atendida pelo projeto</h4>
+                                <small>nome da atividade ou produto por ela ultilizado ou comprado</small>
+                                <p>Isso aqui é um testemunhal , pessoas deixam declarações aqui falando o quanto po produto/programa/serviço é bom e recomendando ele</p>
+                            </div>
+                            ####################################################33
+                             <!-- Blog Comments -->
+
+               
+
+                
+                <%= render 'comments/form' %>
+
+                <!-- Posted Comments -->
+<h3>Comments</h3>
+<% @post.comments.each do |comment| %>
+                <!-- Comment -->
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="http://placehold.it/64x64" alt="">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading"><%= comment.user_name %>
+                            <small><%= comment.created_at %></small>
+                        </h4>
+                        <%= comment.body %>
+                    </div>
+                </div>
+<% end %>
+
+####################################################################33
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
+#########################################
